@@ -1,11 +1,11 @@
 import numpy as np
 from core.LUdecomp import *
-from save import get_upper_triangle_matrix, calculate_back_substitution_phase, get_lower_triangle_matrix
+from Block_1.Helpers.Decomposition import MatrixDecomposition
 
 
 def gauss_decomposition(matrix_A, matrix_b):
-    matrix, results = get_upper_triangle_matrix(matrix_A, matrix_b)
-    x = calculate_back_substitution_phase(matrix, results)
+    matrix, results = MatrixDecomposition.get_upper_triangle_matrix(matrix_A, matrix_b)
+    x = MatrixDecomposition.calculate_back_substitution_phase(matrix, results)
     return x
 
 
@@ -18,8 +18,8 @@ def doolittle_decomposition(matrix_A, matrix_b):
 
 
 def gauss_jordan_method(matrix_A, matrix_b):
-    matrix, results = get_upper_triangle_matrix(matrix_A, matrix_b)
-    matrix_rev, results_rev = get_lower_triangle_matrix(matrix, results)
+    matrix, results = MatrixDecomposition.get_upper_triangle_matrix(matrix_A, matrix_b)
+    matrix_rev, results_rev = MatrixDecomposition.get_lower_triangle_matrix(matrix, results)
     x = []
     for i in range(len(results_rev)):
         x.append(results_rev[i] / matrix_rev[i][i])
