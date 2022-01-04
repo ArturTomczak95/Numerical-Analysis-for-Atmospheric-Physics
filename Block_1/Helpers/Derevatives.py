@@ -21,4 +21,4 @@ class DerivativesFromPolynomial:
             second_derivative = sp.diff(first_derivative, symbol_x)
             second_derivative_func = sp.lambdify(symbol_x, second_derivative, modules=['numpy'])
             print("f''(x) = %.10f" % (sp.simplify(second_derivative)))
-            print("f''(%d) = %.10f" % (x_data, second_derivative_func(x_data)))
+            print("f''(%.10f) = %.10f" % (x_data, second_derivative_func(x_data)))

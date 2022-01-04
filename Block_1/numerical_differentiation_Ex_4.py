@@ -73,7 +73,6 @@ def least_squares_quadratic(plot_data, x_data):
     Helpers.calculate_derivatives(polynomial, x_data, x_symbol)
 
 
-
 def handle(matrix, x_data):
     plot_data = PlotData(matrix)
     least_squares_linear(plot_data, x_data)
@@ -83,10 +82,5 @@ def handle(matrix, x_data):
 if __name__ == '__main__':
     print("__________started__________")
     matrixA = [[0, 7], [2, 11], [3, 28]]  # [[x,y], [x, y],...]
-    # matrixA = [[1, 1.5], [2, 3.8], [3, 6.7], [4, 9.], [5, 11.2], [6, 13.6], [7, 16.]]  # [[x,y], [x, y],...]
-    # matrixA = [[-.04, -8.66], [.93, -6.44], [1.95, -4.36], [2.90, -3.27],
-    #            [3.83, -0.88], [5., 0.87], [5.98, 3.31], [7.05, 4.63], [8.21, 6.19], [9.08, 7.4], [10.09, 8.85]]  # [[x,y], [x, y],...]
-    # matrixA = [[-5., -2.], [-1., 6.], [0, 1.], [2., 3.]]  # [[x,y], [x, y],...]
-    # matrixA = np.array([[0.84, 0.431711], [0.92, 0.398519], [1.00, 0.367879], [1.08, 0.339596], [1.16, 0.313486]])  # [[x,y], [x, y],...]
     handle(matrixA, 1)
     print("__________finished__________")

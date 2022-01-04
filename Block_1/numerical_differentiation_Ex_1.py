@@ -1,6 +1,7 @@
 import numpy as np
 from Helpers.PlotData import PlotData
 
+
 def calculate_3_points_central_first_derivative(y_coordinates, step):
     nominator = y_coordinates[-1] - y_coordinates[0]
     denominator = 2 * step
@@ -27,7 +28,7 @@ def handle(matrix):
     step = x_coordinates[1] - x_coordinates[0]
 
     first_derivative = calculate_first_central_first_derivative(y_coordinates, step)
-    print("First derivative of 1.00: %.10f" % first_derivative)
+    print("f'(1.00) = %.10f" % first_derivative)
 
 
 if __name__ == '__main__':

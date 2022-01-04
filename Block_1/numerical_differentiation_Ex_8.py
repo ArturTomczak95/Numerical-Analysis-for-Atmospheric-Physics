@@ -7,7 +7,7 @@ from block_1_methods import NumericalMethods, LinearAlgebraicMethods, Helpers
 x_symbol = sp.Symbol('x')
 
 
-def get_lowest_st_dev_coefs(plot_data, x_data):
+def get_lowest_st_dev_coefs(plot_data):
     global x_symbol
     std_dev = np.Inf
     coefs = []
@@ -24,7 +24,7 @@ def get_lowest_st_dev_coefs(plot_data, x_data):
 
 def handle(matrix, x_data):
     plot_data = PlotData(matrix)
-    coefs = get_lowest_st_dev_coefs(plot_data, x_data)
+    coefs = get_lowest_st_dev_coefs(plot_data)
     polynomial = NumericalMethods.get_least_squares_polynomial(coefs, x_symbol)
     Helpers.calculate_derivatives(polynomial, 0, x_symbol, second_derivative=False)
     print()

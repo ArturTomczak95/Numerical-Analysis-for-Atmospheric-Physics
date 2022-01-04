@@ -185,13 +185,13 @@ def handle(matrix):
 
     print("[f'(x), f''(x)]")
     print("first finite difference approximation")
-    print("forward, \t x = 1.00", first_central_derivatives)
-    print("backward, \t x = 1.16", first_backward_derivatives)
-    print("forward, \t x = 0.84", first_forward_derivatives)
+    print("central: \t x = 1.00", first_central_derivatives)
+    print("backward: \t x = 1.16", first_backward_derivatives)
+    print("forward: \t x = 0.84", first_forward_derivatives)
     print()
     print("second finite difference approximation")
-    print("backward, \t x = 1.16", second_backward_derivatives)
-    print("second, \t x = 0.84", second_forward_derivatives)
+    print("backward: \t x = 1.16", second_backward_derivatives)
+    print("forward: \t x = 0.84", second_forward_derivatives)
 
 
 if __name__ == '__main__':

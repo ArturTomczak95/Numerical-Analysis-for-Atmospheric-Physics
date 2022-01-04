@@ -15,6 +15,10 @@ def calculcate_matrix_inverse(matrix):
 
 
 def handle(matrix):
+    print("Matrix given:")
+    print(matrix)
+    print()
+
     inverse_matrix = calculcate_matrix_inverse(matrix)
     print("Matrix inverse:")
     print(inverse_matrix)

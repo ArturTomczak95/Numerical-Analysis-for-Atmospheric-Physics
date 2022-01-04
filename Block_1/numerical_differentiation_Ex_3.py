@@ -69,10 +69,7 @@ def handle(matrix, x_data):
 
 if __name__ == '__main__':
     print("__________started__________")
-    # x_data_inputted = input("x? ")
     x_data_inputted = 1
     matrixA = [[0, 7], [2, 11], [3, 28]]  # [[x,y], [x, y],...]
-    # matrixA = [[-5., -2.], [-1., 6.], [0, 1.], [2., 3.]]  # [[x,y], [x, y],...]
-    # matrixA = np.array([[0.84, 0.431711], [0.92, 0.398519], [1.00, 0.367879], [1.08, 0.339596], [1.16, 0.313486]])  # [[x,y], [x, y],...]
     handle(matrixA, int(x_data_inputted))
     print("__________finished__________")
