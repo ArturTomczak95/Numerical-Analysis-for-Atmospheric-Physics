@@ -1,5 +1,6 @@
 from Block_1.Helpers.PlotData import PlotData
 
+
 class FiveStepsCoordinate:
     plot_data = None
 
@@ -29,6 +30,7 @@ class FiveStepsCoordinate:
 
         return self.plot_data.get_y_coordinates()
 
+
 class FiveStepsCoordinateForward:
     plot_data = None
 
@@ -45,7 +47,7 @@ class FiveStepsCoordinateForward:
         self.broke_coordinates_into_steps(y_coordinates)
 
     def broke_coordinates_into_steps(self, y_coordinates):
-        #  [f(x-2h), f(x-h), f(x), f(x+h), f(x+2h)] => [0, 1 , 2, -2, -1]
+        #  [f(x), f(x+h), f(x+2h), f(x+3h), f(x+4h)] => [0, 1 , 2, 3, 4]
         self.x = y_coordinates[0]
         self.x_plus_h = y_coordinates[1]
         self.x_plus_2h = y_coordinates[2]
@@ -74,7 +76,7 @@ class FiveStepsCoordinateBackward:
         self.broke_coordinates_into_steps(y_coordinates)
 
     def broke_coordinates_into_steps(self, y_coordinates):
-        #  [f(x-2h), f(x-h), f(x), f(x+h), f(x+2h)] => [0, 1 , 2, -2, -1]
+        #  [f(x), f(x-h), f(x-2h), f(x-3h), f(x-4h)] => [0, 1 , 2, 3, 4]
         self.x = y_coordinates[0]
         self.x_minus_h = y_coordinates[1]
         self.x_minus_2h = y_coordinates[2]
