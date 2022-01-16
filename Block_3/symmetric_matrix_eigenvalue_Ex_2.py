@@ -35,6 +35,7 @@ def handle(A_matrix):
 
 
 if __name__ == '__main__':
+    np.set_printoptions(precision=10, linewidth=np.inf)
     print("__________started__________")
     A = [[7., -4., 3., -2., 1., 0.],
          [-4., 8., -4., 3., -2., 1.],

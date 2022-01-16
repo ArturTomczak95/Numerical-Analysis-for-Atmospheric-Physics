@@ -20,6 +20,7 @@ def compare_results(A_matrix, eigenvalues, eigenvectors):
     eigenvectors = np.array(eigenvectors)
 
     # result_matrix = np.zeros(shape=(matrix_size, matrix_size))
+    print("check if: Av = λv")
     for i in range(0, matrix_size):
         # Av = λv
         eigenvalue = eigenvalues[i]
@@ -60,6 +61,7 @@ def handle(A_matrix):
 
 if __name__ == '__main__':
     print("__________started__________")
+    np.set_printoptions(precision=10)
     A = [[4., -2., 1., -1.],
          [-2., 4., -2., 1.],
          [1., -2., 4., -2.],
